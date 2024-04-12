@@ -1,0 +1,18 @@
+/*
+Reverse Words in a String:
+Write a function that reverses the order of words in a given string.
+For example, "Hello World" should become "World Hello".
+*/
+
+let str = prompt("Enter the string");
+let s = str_rev(str);
+console.log("String on reversing words :");
+console.log(s);
+
+
+function str_rev(stri){
+    let arr=stri.split(" "); //splits each item of string on basis of seperator mentioned and returns an array of items
+    arr.reverse();//reverses item of the array
+    stri = arr.join();//joins the items of the array and returns a string
+    return stri ;
+}
