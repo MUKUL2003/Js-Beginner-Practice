@@ -1,0 +1,22 @@
+//BMI CALCULATOR
+
+var weight = parseInt(prompt("Enter your weight in kgs"));
+var height =parseFloat(prompt("Enter your height"));
+
+const bmi = (weight)/(height**2) ;
+
+
+if(bmi<=18.5){
+    alert("You are UnderWeight");
+}
+else if(bmi>18.5 && bmi<=24.9){
+    alert("You are a Healthy Person");
+}
+else if(bmi>=25 && bmi<29.9){
+    alert("You are an Overweight");
+}
+else{
+    alert("You are an Obese");
+}
+
+
