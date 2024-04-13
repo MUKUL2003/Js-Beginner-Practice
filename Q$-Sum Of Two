@@ -1,0 +1,26 @@
+/*
+Sum of Two:
+Write a function that takes an array of numbers and a target number.
+The function should return true if there are two numbers in the array 
+that add up to the target value, otherwise return false.
+*/
+
+let arr = [] ;
+let n , target,i=0 ,j ;
+n = prompt("Enter size of array");
+j=n-1 ;
+target = prompt("Enter the target sum ");
+while(n--){
+    arr.push(parseInt(prompt()));
+}
+console.log(hasTwoSum(arr , target));
+
+function hasTwoSum(nums , tgt){
+    let numMap = {} ;
+    for(let num of nums){
+        let complement = tgt-num ;
+        if(numMap[complement])return true;
+        else numMap[num] = true;
+    }
+    return false ;
+}
